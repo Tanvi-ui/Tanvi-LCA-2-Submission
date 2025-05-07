@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Meals - Recipe Page</title>
+  <link rel="stylesheet" href="receipe.css">
+</head>
+<body>
+  <header>
+    <h1>Healthy Meals</h1>
+    <div class="search-container">
+      <input type="text" id="recipe-search" placeholder="Search recipes..." onkeyup="filterRecipes()">
+    </div>
+    <div class="filters">
+  <select id="timeFilter">
+    <option value="">Meals</option>
+    <option value="under30">Breakfast</option>
+    <option value="30plus">Dinner</option>
+    <option value="30plus">lunch</option>
+    <option value="30plus">All</option>
+  </select>
+
+  <select id="ratingFilter">
+    <option value=""> Ratings</option>
+    <option value="5">5 ⭐</option>
+    <option value="4">4 ⭐ and above</option>
+  </select>
+
+  <select id="vegFilter">
+    <option value="">Veg/Nonveg</option>
+    <option value="veg">Vegetarian</option>
+    <option value="nonveg">Non-Vegetarian</option>
+  </select>
+</div>
+  </header>
+  <a href="healthy food.html" class="back-arrow">←</a>
+  <main>
+    <div class="recipe-grid">
+     
+      
+      <div class="recipe-card">
+        <button class="favorite-btn" onclick="addToFavorites">♥</button>
+        <img src="https://www.myweekendkitchen.in/wp-content/uploads/2019/02/quinoa_buddha_bowl_flatlay.jpg" alt="Quinoa Bowl">
+        <div class="recipe-info">
+          <h3>Quinoa Bowl</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 30 mins</p>
+          <p>Calories: 420 kcal</p>
+          <p>Vegetarian: Yes</p>
+          <p>Health: High-Protein, Gluten-Free</p>
+          <p>A nourishing bowl of quinoa, roasted veggies, and tahini dressing.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <button class="favorite-btn" onclick="addToFavorites">♥</button>
+        <a href="receipe card.html" class="recipe-link">
+          <img src="https://www.eatingwell.com/thmb/ZQrLhPC_RxCEhJwAHhayjBHXDV8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7010038_CL_Bowls_ingredients_049-cf9ba6805e5f4c1593044106bec217d7.jpg" alt="Berry Smoothie">
+          <div class="recipe-info">
+            <h3>Berry Smoothie</h3>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <p>Time: 10 mins</p>
+            <p>Calories: 200 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Antioxidant-rich</p>
+            <p>Refreshing smoothie with mixed berries, yogurt, and honey.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="recipe-card">
+        <button class="favorite-btn" onclick="addToFavorites">♥</button>
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chickpea-curry-recipe.jpg" alt="Chickpea Curry">
+        <div class="recipe-info">
+          <h3>Chickpea Curry</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 35 mins</p>
+          <p>Calories: 380 kcal</p>
+          <p>Vegetarian: Yes</p>
+          <p>Health: High-Fiber</p>
+          <p>Flavorful Indian curry made with chickpeas and spices.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <button class="favorite-btn" onclick="addToFavorites">♥</button>
+        <img src="https://farm7.static.flickr.com/6194/6100323902_1d0b716de6_o.jpg" alt="Brown Rice & Veggies">
+        <div class="recipe-info">
+          <h3>Brown Rice & Veggies</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 40 mins</p>
+          <p>Calories: 410 kcal</p>
+          <p>Vegetarian: Yes</p>
+          <p>Health: Whole-Grain, Low-Fat</p>
+          <p>Hearty bowl of brown rice and steamed mixed vegetables.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <button class="favorite-btn" onclick="addToFavorites">♥</button>
+        <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-05-chicken-lettuce-wraps%2Fchicken-lettuce-wraps-315" alt="Chicken Lettuce Wraps">
+        <div class="recipe-info">
+          <h3>Chicken Lettuce Wraps</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 25 mins</p>
+          <p>Calories: 350 kcal</p>
+          <p>Vegetarian: No</p>
+          <p>Health: Low-Carb</p>
+          <p>Low-carb wraps with ground chicken and crisp lettuce.</p>
+        </div>
+      </div>
+     
+  
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://www.spendwithpennies.com/wp-content/uploads/2022/09/Avocado-Toast-SpendWithPennies-1.jpg" alt="Avocado Toast">
+          <div class="recipe-info">
+            <h3>Avocado Toast</h3>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <p>Time: 5 mins</p>
+            <p>Calories: 300 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Healthy Fats</p>
+            <p>Whole grain toast topped with smashed avocado and chili flakes.</p>
+          </div>
+        </div>
+  
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://rakskitchen.net/wp-content/uploads/2013/10/10077842433_15b44d2c84_z.jpg" alt="Oats Upma">
+          <div class="recipe-info">
+            <h3>Oats Upma</h3>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Time: 15 mins</p>
+            <p>Calories: 280 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Fiber-Rich</p>
+            <p>A healthy twist to the classic upma using rolled oats.</p>
+          </div>
+        </div>
+  
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-recipe.jpg" alt="Veg Sandwich">
+          <div class="recipe-info">
+            <h3>Veg Sandwich</h3>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Time: 8 mins</p>
+            <p>Calories: 320 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Balanced Meal</p>
+            <p>Whole wheat sandwich filled with veggies and light mayo.</p>
+          </div>
+        </div>
+  
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdB7dEgQKT5N6ApeEFpz4vnuv4jW9oDCSR-g&s" alt="Zucchini Pasta">
+          <div class="recipe-info">
+            <h3>Zucchini Pasta</h3>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Time: 20 mins</p>
+            <p>Calories: 330 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Low-Carb</p>
+            <p>Spiralized zucchini sautéed with garlic and cherry tomatoes.</p>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://images.themodernproper.com/production/posts/GreekSalad_9.jpg?w=1200&h=1200&q=60&fm=jpg&fit=crop&dm=1718650734&s=70119bf37604d243d0729db7f4cda445" alt="Greek Salad">
+          <div class="recipe-info">
+            <h3>Greek Salad</h3>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+            <p>Time: 10 mins</p>
+            <p>Calories: 250 kcal</p>
+            <p>Vegetarian: Yes</p>
+            <p>Health: Low-Cal, Hydrating</p>
+            <p>Refreshing cucumber, tomato, olives, and feta salad.</p>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://www.allrecipes.com/thmb/aPy_MqN4GgyO27vh98ns1pXaIWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8499-Best-Chicken-Salad-DDMFS-3X4-11915-d36a5b98b1e041b3b48b62ecdfa6029e.jpg" alt="Grilled Chicken Salad">
+          <h3>Grilled Chicken Salad</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 25 mins</p>
+          <p>Calories: 400 kcal</p>
+          <p>Vegetarian: No</p>
+          <p>Health: High-Protein, Low-Carb</p>
+          <p>A healthy salad with grilled chicken, mixed greens, and a light vinaigrette.</p>
+        </div>
+        
+        <div class="recipe-card">
+          <button class="favorite-btn" onclick="addToFavorites">♥</button>
+          <img src="https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg" alt="Vegetable Stir-Fry">
+          <h3>Vegetable Stir-Fry</h3>
+          <p>Rating: ⭐⭐⭐⭐☆</p>
+          <p>Time: 20 mins</p>
+          <p>Calories: 300 kcal</p>
+          <p>Vegetarian: Yes</p>
+          <p>Health: Vegan, Low-Calorie</p>
+          <p>A quick stir-fry with assorted vegetables and tofu.</p>
+        </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Healthy Meals</p>
+  </footer>
+<!-- Scroll to Top Button -->
+<!-- Scroll to Top Button -->
+<!-- Scroll to Top Button -->
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); background-color: transparent; color: #058D95; border: 2px solid #058D95; border-radius: 50%; font-size: 24px; width: 60px; height: 60px; cursor: pointer; display: none;">
+  ↑
+</button>
+
+
+
+  
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

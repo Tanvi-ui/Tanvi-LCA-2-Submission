@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Meals</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  <header>
+    <div class="logo">Healthy Meals</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    
+      
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="receipes.html">Recipes</a>
+      
+      <a href="blog.html">Blog</a>
+      <a href="#">Favorites</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="login">Login</a>
+      <a href="signup.html" class="signup">Sign Up</a>
+    </div>
+    
+   
+  </header>
+
+
+<section class="hero">
+  <video id="hero-video" autoplay muted loop playsinline>
+    <source src="Untitled design.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <img id="hero-image" class="hidden" alt="Hero Image">
+
+  <div class="hero-content">
+    <h1>Meals made tastier and healthier for you!</h1>
+    <button id="video-label">Breakfast</button>
+  </div>
+
+  <div class="arrow-buttons">
+    <button onclick="changeMeal('prev')">←</button>
+    <button onclick="changeMeal('next')">→</button>
+  </div>
+</section>
+
+  <section class="recipes" id="recipes">
+    <h2>Popular Breakfast Recipes</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="https://www.eatingwell.com/thmb/ZQrLhPC_RxCEhJwAHhayjBHXDV8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7010038_CL_Bowls_ingredients_049-cf9ba6805e5f4c1593044106bec217d7.jpg" alt="Recipe 1">
+        <h3>Berry Smoothie Bowl</h3>
+        <h4>5 mins</h4>
+        <p>Make a colourful berry smoothie bowl for breakfast. You could swap in mango, pineapple and kiwi etc</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://www.spendwithpennies.com/wp-content/uploads/2022/09/Avocado-Toast-SpendWithPennies-1.jpg" alt="Recipe 2">
+        <h3>Avocado Toast</h3>
+        <p>Simple, delicious, and packed with nutrients.</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/oats-dosa-2.jpg" alt="Recipe 3">
+        <h3>Oats dosa</h3>
+        <p>Quick and crisp instant oats dosa made with oats, rice flour and rava (sooji.) no fermentation required</p>
+      </div>
+    </div>
+  </section>
+  <section class="meal-ideas">
+    <h2>Meal Ideas for Every Time of Day</h2>
+    <div class="meal-grid">
+      
+      <div class="meal-card">
+        <img src="https://www.eatingwell.com/thmb/_G_wcOvKcnl7WQ11FnFfpAWejD4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/EW-LWWD-June-Cottage-Cheese-Toast-04-Loose-1x1-d676ac94e7764605b312941b3c672f4b.jpg">
+        <h3>Healthy Breakfast <span class="arrow">→</span></h3>
+        <p>Fuel your morning with smoothies, oats, and protein-packed bites.</p>
+      </div>
+      <div class="meal-card">
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2018/01/lunch-ideas.jpg">
+        <h3>Healthy Lunch <span class="arrow">→</span></h3>
+        <p>Stay energized with grain bowls, fresh veggies, and lean proteins.</p>
+      </div>
+      <div class="meal-card">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/08/Fish-Tacos-1337495.jpg?quality=90&resize=556,505">
+        <h3>Healthy Dinner <span class="arrow">→</span></h3>
+        <p>End the day with satisfying, light meals full of nutrients.</p>
+      </div>
+    </div>
+  </section>
+  <section class="benefits-section">
+    <div class="benefits-content">
+      <div class="benefits-info">
+        <h2>Benefits of Eating Healthy</h2>
+        <p>Eating a balanced and healthy diet can greatly improve your energy levels, mood, and overall well-being. A healthy diet is essential for the proper functioning of the body, providing the necessary nutrients to fight diseases and maintain good health. You can maintain a healthy weight, improve mental health, and even reduce the risk of chronic diseases like diabetes and heart disease.</p>
+        <p>Some of the benefits include:</p>
+        <ul>
+          <li>Improved energy and vitality</li>
+          <li>Better mental focus and clarity</li>
+          <li>Stronger immune system</li>
+          <li>Longer lifespan</li>
+          <li>Reduced risk of chronic diseases</li>
+        </ul>
+      </div>
+      <div class="benefits-image">
+        <img src="https://30dayfitness.app/static/95d698c33cb70ad031b44cac285781f5/a1eb1/make-jealthy-food-taste-good.jpg" alt="Healthy Eating">
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>Healthy Meals</strong></p>
+      <p><a href="contact.html">Contact Us</a></p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main page.js"></script>
+
+  
+  
+</body>
+</html>

@@ -1,0 +1,394 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: sans-serif;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(154, 151, 151, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2a9d8f;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content button {
+  padding: 0.5rem 2.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background:#2a9d8f ;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.arrow-buttons button {
+  background-color: rgba(187, 182, 182, 0.7);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0.3rem 0.6rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.recipes {
+  padding: 5rem 8rem;
+  background: #f1f8e9;
+  
+}
+
+.recipes h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #159082;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 100px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  margin: 0.8rem 0 0.3rem;
+  color:#2a9d8f;
+}
+
+.recipe-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  nav, .auth-buttons {
+    display: none;
+  }
+
+  nav.active,
+  .auth-buttons.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+.meal-ideas {
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+}
+
+.meal-ideas h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2a9d8f;
+  margin-bottom: 30px;
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 5rem rem ;
+}
+
+.meal-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.meal-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-card h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #2a9d8f;
+}
+
+.arrow {
+  color: #ff4081;
+  font-size: 1.3rem;
+  margin-left: 8px;
+}
+
+.meal-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+.auth-buttons a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.auth-buttons .login {
+  background-color: #ffffff;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.auth-buttons .signup {
+  background-color: #2a9d8f;
+  color: white;
+  border: 2px solid #2e7d32;
+}
+
+.auth-buttons .login:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.auth-buttons .signup:hover {
+  background-color: #1b5e20;
+}
+.benefits-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.benefits-info {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.benefits-info h2 {
+  font-size: 2rem;
+  color: #2c6e49;
+  margin-bottom: 1rem;
+}
+
+.benefits-info p, .benefits-info ul {
+  font-size: 1rem;
+  color: #333;
+}
+
+.benefits-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.benefits-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  background-color: #2c6e49;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 1rem;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+/* Hero section style */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevent the image from overflowing */
+}
+
+.hero video,
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure both video and image fit the screen proportionally */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+.hero img {
+  opacity: 0.8; 
+}
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: white;
+  text-align: center; /* Center align the text */
+  z-index: 2; /* Ensure the text is always on top of the media */
+}
+
+.arrow-buttons {
+  position: absolute;
+  bottom: 10%;
+  right: 20px;
+  z-index: 2; /* Ensure buttons are above the image/video */
+}
+
+.arrow-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
